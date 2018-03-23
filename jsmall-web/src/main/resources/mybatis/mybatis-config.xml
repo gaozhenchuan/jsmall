@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- mybatis物理分页设置 -->
+    <properties>
+        <!-- 数据库方言 -->
+        <property name="dialect" value="sqlserver" />
+        <!-- 以Page结尾的Sql查询启用物理分页 -->
+        <property name="pageSqlId" value=".*Page$" />
+    </properties>
+    <!-- 加载mybatis物理分页插件  -->
+    <!--<plugins>
+    <plugin interceptor="framework.utils.dialect.PageInterceptor"></plugin>
+    </plugins>-->
+    <!-- 加载Sql映射文件 -->
+    <mappers>
+        <!-- <mapper resource="business/common/dao/CommonDaoMapper.xml"/>-->
+    </mappers>
+</configuration>  
