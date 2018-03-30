@@ -26,7 +26,6 @@
     <module>jsmall-common</module>
     <module>jsmall-web</module>
     <module>jsmall-service</module>
-    <module>jsmall-pojo</module>
     <module>jsmall-dao</module>
   </modules>
 </project>
