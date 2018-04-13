@@ -89,6 +89,7 @@ public class PagerTag extends TagSupport {
             //获取请求中的所有参数  
             HttpServletRequest request = (HttpServletRequest) pageContext
                     .getRequest();  
+            @SuppressWarnings("unchecked")
             Enumeration<String> enumeration = request.getParameterNames();
             String name = null;  //参数名  
             String value = null; //参数值  

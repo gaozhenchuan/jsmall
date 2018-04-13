@@ -1,4 +1,4 @@
-package org.jsmall.service;
+package org.jsmall.batch;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

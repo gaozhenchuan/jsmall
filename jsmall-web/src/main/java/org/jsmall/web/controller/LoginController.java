@@ -4,10 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import org.jsmall.service.IUserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -24,7 +21,7 @@ public class LoginController {
 //    @Autowired 
 //    private IRentBikeService rentBikeService;
 
-    private IUserService userService;
+    //private IUserService userService;
 
     /** 
      * 跳转到登录页面 
@@ -48,7 +45,7 @@ public class LoginController {
     @RequestMapping("/getkaptchaCode") 
     public ModelAndView getKaptchaCode(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        HttpSession session = request.getSession();
+        //HttpSession session = request.getSession();
         response.setDateHeader("Expires", 0);
         response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
         response.addHeader("Cache-Control", "post-check=0, pre-check=0");

@@ -1,4 +1,4 @@
-package org.jsmall.common;
+package org.jsmall.batch;
 
 /**
  * Hello world!

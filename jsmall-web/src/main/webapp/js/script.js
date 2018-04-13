@@ -1,8 +1,6 @@
 var current_scrollY;
 
-//--------------------------------------------------
-// ウィンドウロード時、リサイズ時の処理
-//--------------------------------------------------
+
 $(window).on('load', function() {
 	windowResize();
 });
@@ -15,9 +13,7 @@ function resizeHandler() {
 	resizeTimeout = setTimeout(windowResize(), 10);
 }
 
-//--------------------------------------------------
-// ウィンドウリサイズ関数
-//--------------------------------------------------
+
 function windowResize() {
 	var windowHeight = $(window).height();
 	var windowWidth = $(window).width();
@@ -54,15 +50,9 @@ function windowResize() {
 	$('.list-box').css('height', '');
 	var col_header_table_height = $('.col-header-table').height();
 	$('.list-box').css('height', col_header_table_height + 'px');
-//	main_content.css('height', (windowHeight - header.height()) + 'px');
 }
 
-//--------------------------------------------------
-// readyイベント
-//--------------------------------------------------
 $(document).ready(function() {
-	// 文字サイズの選択
-//	var font_size = localStorage.getItem('font_size');
 	var font_size = null;
 
 	if(font_size != null) {
@@ -133,13 +123,10 @@ $(document).ready(function() {
 	     element.id = "add";
 	     var objBody = document.getElementsByTagName("body").item(0);
 	     objBody.appendChild(element);
-	     // body要素にdivエレメントを追加
 	 })
 
-	// ログアウト確認ダイアログ画面
 	printSignoutQDialog();
 
-	// ログアウト確認ダイアログ画面の[はい]ボタン押下時の処理
 	$('#exit-close-btn').on('click', function(e) {
 		e.preventDefault();
 		$.magnificPopup.close();
@@ -424,7 +411,6 @@ function defineFileUploadCompornentFunc() {
 					});
 
 					XHR.upload.addEventListener('error',function(e){
-						// TODO ファイルアップロード失敗メッセージ？？を出力
 					});
 	            }
 				return XHR;

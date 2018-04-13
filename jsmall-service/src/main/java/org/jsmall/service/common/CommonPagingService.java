@@ -1,27 +1,10 @@
 package org.jsmall.service.common;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
 public class CommonPagingService<M extends CommonRecordsForm, S, R>{
-
-	/**
-	 * serialVersionUID
-	 * @see long
-	 */
-	private static final long serialVersionUID = -4473187954086088877L;
-
-
-	private static final String KEY_SESSION_PICTIS_POSS_PRE_STRING = "SESSION_PICTIS_POSS_";
-
-
-	private static final String KEY_SESSION_PICTIS_POSS_CONDITION = "_CONDITION";
-
-
-	private static final String KEY_SESSION_PICTIS_POSS_MODEL = "_MODEL";
-
 
 	protected void reSettingForm(HttpServletRequest req, M model) throws Exception {
 		return;

@@ -7,16 +7,13 @@
     <artifactId>jsmall</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>org.jsmall</groupId>
   <artifactId>jsmall-web</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>jsmall-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <spring.version>4.2.6.RELEASE</spring.version>
     <struts.version>2.3.16.3</struts.version>
     <cxf.version>3.0.2</cxf.version>
   </properties>
