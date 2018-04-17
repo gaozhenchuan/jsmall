@@ -7,16 +7,11 @@
     <artifactId>jsmall</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
+  
   <artifactId>jsmall-web</artifactId>
   <packaging>war</packaging>
   <name>jsmall-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <struts.version>2.3.16.3</struts.version>
-    <cxf.version>3.0.2</cxf.version>
-  </properties>
   
   <dependencies>
     <dependency>
@@ -61,23 +56,6 @@
         <version>2.0.6</version>
     </dependency>
     
-        <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis</artifactId>
-      <version>3.2.8</version>
-    </dependency>
-    
-    <dependency>
-        <groupId>org.mybatis</groupId>
-        <artifactId>mybatis-spring</artifactId>
-        <version>1.2.2</version>
-    </dependency>
-    
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.30</version>
-    </dependency>
     
     <dependency>
         <groupId>commons-dbcp</groupId>

@@ -12,7 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.alibaba.fastjson.JSONObject;
 
 @Controller
-@RequestMapping(value = "/longin1")
 public class LoginController {
 
 //    @Resource 
@@ -30,7 +29,7 @@ public class LoginController {
      */ 
     @RequestMapping(value = "/loginTurn")
     public String loginTurn() { 
-        return "user/login"; 
+        return "login1"; 
     }
 
     /** 

@@ -15,6 +15,9 @@
     <spring.version>4.2.6.RELEASE</spring.version>
     <spring.batch.version>3.0.7.RELEASE</spring.batch.version>
     <mybatis.version>3.4.5</mybatis.version>
+    
+    <struts.version>2.3.16.3</struts.version>
+    <cxf.version>3.0.2</cxf.version>
   </properties>
 
   <dependencies>
@@ -25,6 +28,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
   <modules>
     <module>jsmall-common</module>
     <module>jsmall-web</module>
