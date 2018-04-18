@@ -10,9 +10,8 @@
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
             http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
-
-    <!-- 自动扫描(自动注入) -->
-    <context:component-scan base-package="org.fujias.*"/>
+    
+    <context:property-placeholder location="classpath:jdbc/jdbc.properties"/> 
     
     <bean id="propertyConfigurer"
         class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -49,8 +48,18 @@
         <!-- 配置MyBaties全局配置文件:mybatis-config.xml -->
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml" />
         <!-- 扫描entity包 使用别名 -->
-        <property name="typeAliasesPackage" value="com.fujias.itesting.entity" />
+        <!--<property name="typeAliasesPackage" value="com.fujias.itesting.entity" />-->
         <!-- 扫描sql配置文件:mapper需要的xml文件 -->
         <property name="mapperLocations" value="classpath:mapper/*.xml" />
+    </bean>
+    
+    <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="org.jsmall.dao.common.ulogin.*"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+    
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 </beans>

@@ -1,4 +1,4 @@
-package org.jsmall.service.mail.entity;
+package org.jsmall.service.common.mail.entity;
 
 import java.io.Serializable;
 

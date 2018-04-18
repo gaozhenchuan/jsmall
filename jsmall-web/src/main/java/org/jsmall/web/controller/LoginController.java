@@ -5,6 +5,8 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.jsmall.service.common.login.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -20,7 +22,8 @@ public class LoginController {
 //    @Autowired 
 //    private IRentBikeService rentBikeService;
 
-    //private IUserService userService;
+	@Autowired(required = true)
+    private IUserService userService;
 
     /** 
      * 跳转到登录页面 
@@ -29,7 +32,10 @@ public class LoginController {
      */ 
     @RequestMapping(value = "/loginTurn")
     public String loginTurn() { 
-        return "login1"; 
+    	if (userService.getUserCount(1003)) {
+    		return "login1"; 
+    	}
+        return "login2"; 
     }
 
     /** 

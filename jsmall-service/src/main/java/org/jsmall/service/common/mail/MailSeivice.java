@@ -1,4 +1,4 @@
-package org.jsmall.service.mail;
+package org.jsmall.service.common.mail;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -20,10 +20,10 @@ import javax.mail.util.ByteArrayDataSource;
 
 import org.jsmall.common.BaseLogger;
 import org.jsmall.common.BaseProperties;
-import org.jsmall.service.mail.dto.AttachmentDto;
-import org.jsmall.service.mail.dto.MailAddressDto;
-import org.jsmall.service.mail.dto.MailMessageDto;
-import org.jsmall.service.mail.entity.MyAuthenticator;
+import org.jsmall.service.common.mail.dto.AttachmentDto;
+import org.jsmall.service.common.mail.dto.MailAddressDto;
+import org.jsmall.service.common.mail.dto.MailMessageDto;
+import org.jsmall.service.common.mail.entity.MyAuthenticator;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;

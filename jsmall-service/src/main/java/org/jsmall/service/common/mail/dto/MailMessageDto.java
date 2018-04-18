@@ -1,4 +1,4 @@
-package org.jsmall.service.mail.dto;
+package org.jsmall.service.common.mail.dto;
 
 import java.io.Serializable;
 import java.text.MessageFormat;
