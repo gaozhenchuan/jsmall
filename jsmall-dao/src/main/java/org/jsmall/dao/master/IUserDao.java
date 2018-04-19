@@ -1,6 +1,6 @@
-package org.jsmall.dao.common.ulogin;
+package org.jsmall.dao.master;
 
-public interface IUserMapper {
+public interface IUserDao {
 
     /**
      * <dd>概要：

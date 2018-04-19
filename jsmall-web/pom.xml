@@ -23,7 +23,19 @@
     
     <dependency>
         <groupId>org.jsmall</groupId>
+        <artifactId>jsmall-dao</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.jsmall</groupId>
         <artifactId>jsmall-service</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.jsmall</groupId>
+        <artifactId>jsmall-common</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </dependency>
     

@@ -3,7 +3,9 @@ package org.jsmall.dao.master;
 import java.util.List;
 
 import org.jsmall.dao.entity.User;
+import org.springframework.stereotype.Service;
 
+@Service
 public class IUsersDaoImpl implements IUsersDao {
 
     public List<User> findUsersByName(String username) throws Exception {
