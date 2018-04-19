@@ -1,4 +1,4 @@
-package org.jsmall.service.common.login;
+package org.jsmall.service.login;
 
 public interface IUserService {
 

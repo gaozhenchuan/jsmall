@@ -1,4 +1,4 @@
-package org.jsmall.service.common.login;
+package org.jsmall.service.login;
 
 import org.jsmall.dao.master.IUserDao;
 import org.springframework.beans.factory.annotation.Autowired;
