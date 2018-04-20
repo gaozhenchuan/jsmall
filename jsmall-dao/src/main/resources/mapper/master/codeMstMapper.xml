@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jsmall.dao.master.CodeMstDao">
+    <select id="selectByCodeSetId" resultType="org.jsmall.dao.master.entity.Code" parameterType="java.lang.String">
+        SELECT
+            codeId,
+            subCodeId,
+            codeValue,
+            codeName
+         FROM
+              sys_code
+         WHERE
+              codeId = #{codeId,jdbcType=VARCHAR}
+          AND status = '0'
+        Order By displayOrder ASC
+    </select>
+</mapper>
