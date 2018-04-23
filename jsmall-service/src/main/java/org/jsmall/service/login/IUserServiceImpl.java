@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 public class IUserServiceImpl implements IUserService {
 
     @Autowired(required = true)
-    @Qualifier("userDao")
     private transient IUserDao iUserDao;
     
 //    public boolean getUserCount(int userId) {
@@ -22,4 +21,9 @@ public class IUserServiceImpl implements IUserService {
         // TODO Auto-generated method stub
         return iUserDao.getUserCount(userId) > 0;
     }
+
+	public boolean isLogin(String userId, String password) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

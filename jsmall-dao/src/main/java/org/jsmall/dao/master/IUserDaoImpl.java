@@ -6,7 +6,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
 
-@Repository("userDao")
 public class IUserDaoImpl extends SqlSessionDaoSupport implements IUserDao {
 
     @Resource

@@ -27,6 +27,8 @@
   <context:component-scan base-package="org.jsmall.dao.*"/>
   
   <mvc:interceptors>
+    <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+    <bean class="org.jsmall.common.BaseInterceptor" />
     <mvc:interceptor>
         <mvc:mapping path="/login"/>
         <bean class="org.jsmall.common.LoginInterceptorAdapter"/>

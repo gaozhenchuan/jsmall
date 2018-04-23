@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.jsmall.service.login.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -80,8 +81,8 @@ public class LoginController {
      * @return 校验结果 
      * @author 
      */
-   @RequestMapping(value = "/longin")
-   public String index() {
+   @RequestMapping(value = "/register")
+   public String register() {
        return "index2"; 
    }
 
@@ -93,15 +94,21 @@ public class LoginController {
       * @author 
       */
     @RequestMapping("/login")
-    public JSONObject login(HttpServletRequest request, HttpServletResponse response) {
+    public String login(HttpServletRequest request, HttpServletResponse response) {
 
+        HttpSession session = null;
         //String fileName = file.getOriginalFilename();
 //        String path = request.getSession().getServletContext().getRealPath("login"); 
+        String userId = (String) request.getAttribute("username");
+        String password = (String) request.getAttribute("password");
         JSONObject json = new JSONObject();
+        if (userService.isLogin(userId, password)) {
+            return "index";
+        }
 //        boolean kaptchaFlag = this.checkKaptcha(request, kaptcha);
 //        json.put("kaptchaFlag", kaptchaFlag);
 //
-//        if (kaptchaFlag) { 
+//        if (kaptchaFlag) {
 //            UserBase userBase = new UserBase();
 //            userBase.setUserPhone(userPhone);
 //            UserBase user = rentBikeService.selectUserByUserPhone(userBase);
@@ -113,6 +120,6 @@ public class LoginController {
 //            } 
 //            json.put("userFlag", userFlag); 
 //        }
-        return json; 
+        return "login"; 
     }
 }
