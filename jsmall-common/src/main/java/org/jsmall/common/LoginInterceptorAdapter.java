@@ -4,9 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-public class LoginInterceptorAdapter extends HandlerInterceptorAdapter {
+public class LoginInterceptorAdapter extends BaseInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
@@ -27,12 +26,5 @@ public class LoginInterceptorAdapter extends HandlerInterceptorAdapter {
             throws Exception {
         // TODO Auto-generated method stub
         super.afterCompletion(request, response, handler, ex);
-    }
-
-    @Override
-    public void afterConcurrentHandlingStarted(HttpServletRequest request, HttpServletResponse response, Object handler)
-            throws Exception {
-        // TODO Auto-generated method stub
-        super.afterConcurrentHandlingStarted(request, response, handler);
     }
 }

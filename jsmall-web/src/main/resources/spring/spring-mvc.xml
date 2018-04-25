@@ -42,4 +42,5 @@
   </bean>
   
   <import resource="spring-mybatis.xml"/>
+  <import resource="spring-batch.xml"/>
 </beans>
