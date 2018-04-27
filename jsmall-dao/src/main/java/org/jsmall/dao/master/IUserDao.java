@@ -1,5 +1,7 @@
 package org.jsmall.dao.master;
 
+import org.jsmall.dao.master.dto.UserInfoDto;
+
 public interface IUserDao {
 
     /**
@@ -10,4 +12,6 @@ public interface IUserDao {
      * @return int 件数
      */
     int getUserCount(int userId);
+    
+    UserInfoDto getUserInfo(int userId);
 }

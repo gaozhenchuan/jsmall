@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="cn" >
+<html>
     <head>
         <meta charset="UTF-8">
-        <title>Pure CSS Blurred Video Background Login Box. (fork)</title>
-        <link rel="stylesheet" href="css3/style.css">
+        <title>Login</title>
+        
+        <link href="../css/bootstrap-4.1.0/bootstrap.min.css" rel="stylesheet">  
+        <link rel="stylesheet" href="../css3/style.css">
     </head>
     <body>
       <div class="vid-container">

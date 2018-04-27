@@ -70,6 +70,6 @@ public class DisplayMakeUpInfo
 		this.screenDisplayId = screenDisplayId;
 		this.programId = programId;
 		this.BreadcrumbName = BreadcrumbName;
-		this.breadcrumbDisplayFlag = this.breadcrumbDisplayFlag;
+		//this.breadcrumbDisplayFlag = this.breadcrumbDisplayFlag;
 	}
 }

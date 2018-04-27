@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
-  xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:context="http://www.springframework.org/schema/context"
   xmlns:mvc="http://www.springframework.org/schema/mvc"
   xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -15,8 +15,6 @@
                            http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
   <context:annotation-config />
-
-  <!--<context:component-scan base-package="org.jsmall.web.controller"/> -->
   
   <context:component-scan base-package="org.jsmall.web.controller" >
     <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
@@ -32,8 +30,8 @@
     <mvc:interceptor>
         <mvc:mapping path="/login"/>
         <bean class="org.jsmall.common.LoginInterceptorAdapter"/>
-    </mvc:interceptor>  
-</mvc:interceptors>  
+    </mvc:interceptor>
+  </mvc:interceptors>
   
   <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />

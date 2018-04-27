@@ -17,7 +17,7 @@ public class BaseInterceptor implements HandlerInterceptor {
         
         String requestUri = request.getRequestURI();
         
-        String[] allowUrls = new String[] {"/toLogin", "/login", "/loginTurn"};
+        String[] allowUrls = new String[] {"/register", "/login", "/loginTurn"};
         if (session.getAttribute(SESSION_USER) == null) {
             for (String url : allowUrls) {
                 if (requestUri.endsWith(url)) {

@@ -83,7 +83,7 @@ public class LoginController {
      */
    @RequestMapping(value = "/register")
    public String register() {
-       return "index2"; 
+       return "master/user/register"; 
    }
 
     /** 

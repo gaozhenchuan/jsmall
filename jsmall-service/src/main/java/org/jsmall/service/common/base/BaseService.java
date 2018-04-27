@@ -12,10 +12,10 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.jsmall.common.BaseLogger;
 import org.jsmall.common.BaseMessages;
 import org.jsmall.dao.master.CodeMstDao;
+import org.jsmall.dao.master.dto.UserInfoDto;
 import org.jsmall.dao.master.entity.Code;
 import org.jsmall.service.common.DisplayMakeUpInfo;
 import org.jsmall.service.common.base.dto.DBCommonColumnDto;
-import org.jsmall.service.login.dto.UserInfoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -65,7 +65,8 @@ public class BaseService implements Serializable {
      * @param req リクエスト情報
      * @return String 画面ID
      */
-    public String getPreScreenId(HttpServletRequest req) {
+    @SuppressWarnings("unchecked")
+	public String getPreScreenId(HttpServletRequest req) {
         int i = 1;
         Map<String, DisplayMakeUpInfo> displayMakeUpMap = (LinkedHashMap<String, DisplayMakeUpInfo>)req.getSession()
                 .getAttribute(KEY_SESSION_PICTIS_POSS_DISPLAY_MAKE_UP);
@@ -85,6 +86,7 @@ public class BaseService implements Serializable {
      * @param req リクエスト情報
      * @return String 画面ID
      */
+    @SuppressWarnings("unchecked")
     public String getTwoBeforeScreenId(HttpServletRequest req) {
         int i = 1;
         Map<String, DisplayMakeUpInfo> displayMakeUpMap = (LinkedHashMap<String, DisplayMakeUpInfo>)req.getSession()
@@ -105,6 +107,7 @@ public class BaseService implements Serializable {
      * @param req リクエスト情報
      * @return 更新機能ID
      */
+    @SuppressWarnings("unchecked")
     public String getUpdateFuncId(HttpServletRequest req) {
         int i = 1;
         Map<String, DisplayMakeUpInfo> displayMakeUpMap = (LinkedHashMap<String, DisplayMakeUpInfo>)req.getSession()
@@ -151,6 +154,7 @@ public class BaseService implements Serializable {
      * @param sessionName セッション名
      * @exception Exception
      */
+    @SuppressWarnings("unchecked")
     public String clearModelSession(HttpServletRequest req, String sessionName) throws Exception {
 
         logger.startLog(this.getClass().getName(), "clearModelSession");

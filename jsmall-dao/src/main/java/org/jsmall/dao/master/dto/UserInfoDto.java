@@ -1,4 +1,4 @@
-package org.jsmall.service.login.dto;
+package org.jsmall.dao.master.dto;
 
 import java.util.Date;
 
